@@ -42,24 +42,6 @@ Warn.Font = Enum.Font.FredokaOne
 Warn.TextColor3 = Color3.fromRGB(230, 230, 230)
 Warn.TextScaled = true
 Warn.BackgroundTransparency = 1
-
-local CopyLink = Instance.new("TextButton", Center)
-CopyLink.Text = ServerLink
-CopyLink.Size = UDim2.new(0.8, 0, 0.6, 0)
-CopyLink.AnchorPoint = Vector2.new(0.5, 0.5)
-CopyLink.Position = UDim2.fromScale(0.5, 0.5)
-CopyLink.Font = Enum.Font.FredokaOne
-CopyLink.TextColor3 = Color3.fromRGB(180, 180, 180)
-CopyLink.TextScaled = true
-CopyLink.TextTransparency = 0.2
-CopyLink.BackgroundTransparency = 1
-
-CopyLink.Activated:Connect(function()
-	if CopyLink.Text ~= "Copied!" then
-		setclipboard(ServerLink)
-		CopyLink.Text = "Copied!"
-		task.wait(2)
-		CopyLink.Text = ServerLink
 	end
 end)
 
